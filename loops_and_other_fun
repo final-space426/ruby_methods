@@ -1,0 +1,1320 @@
+#Ruby Practice
+
+  def say_something_x_times(phrase, x)
+    x.times do
+        puts phrase
+      end
+    end()
+    say_something_x_times('Hello', 10)
+
+
+
+
+def introduction(name)
+  puts "Hi, my name is #{name}."
+end
+introduction('Josh')
+
+
+
+def introduction_with_language(name, language)
+  puts "Hi, my name is #{name} and I am learning to program in #{language}."
+end
+introduction_with_language('Josh', 'Ruby')
+
+
+def optional_args(name='Rob', language='Ruby', x)
+  x.times do
+    puts "Turds are called #{name} and they smell like #{language}"
+  end
+end
+optional_args(10)
+
+def chess(x,y)
+
+ def randomNumber()
+   randomRoll = rand(6)
+   return randomRoll
+ end
+ randomRoll()
+
+
+def speak_to_grandma(phrase)
+  if phrase != phrase.capitalize!
+    return "HUH?! SPEAK UP, SONNY!"
+elsif phrase == phrase.capitalize!
+  return "NO, NOT SINCE 1938!"
+elsif phrase == "I LOVE YOU GRANDMA!"
+  return "I LOVE YOU TOO PUMPKIN"
+end
+speak_to_grandma()
+
+#case statements  - test is provided in the form of a variable
+def superhero()
+
+puts "Please enter a DC Superhero"
+
+test = gets.chomp
+
+case test
+
+when "Superman"
+  puts "Metropolis"
+when "Batman"
+  puts "Gotham"
+when "Flash"
+  puts "Star City"
+
+end
+end
+
+counter = 0
+
+loop do
+  puts "How high can you go #{counter}"
+counter += 1
+if counter == 10
+  break
+end
+end
+
+def say_something_x_times(phrase, x)
+  x.times do
+      puts phrase
+    end
+  end()
+  say_something_x_times('Hello', 10)
+
+
+
+counter = 0
+  while counter < 10
+    counter += 1
+    puts "The number of times you almost soil yourself per day is #{counter}"
+end
+
+
+counter = 20
+  until counter == 0
+    puts "How many times you think about cheese each day is #{counter}"
+    counter -= 1
+  end
+
+
+  for counter in 1..40 do
+    puts "The current number is #{counter}."
+  end
+
+
+
+#Ruby Array
+
+my_array = Array.new
+
+cat_array = ["Bob", "Bill"]
+
+
+#front of array
+cat_array.push('Shit Cat')
+#end of the array
+cat_array.unshift("Turd puss")
+
+
+#removes last item
+cat_array.pop
+
+#removes first item
+cat_array.shift
+
+#like the JS length method
+cat_array.count
+
+#return the array in reverse
+cat_array.reverse
+
+#check if item exists in array
+cat_array.include('Turd puss')
+
+#delete an item from Array
+cat_array.delete('Turd puss')
+
+
+
+
+   def instantiate_new_array
+    Array.new
+   end
+
+   def array_with_two_elements
+    array = [1,2]
+   end
+
+   def first_element(array)
+     return array[0]
+   end
+
+   def third_element(array)
+     return array[2]
+   end
+
+   def last_element(array)
+     return array[-1]
+   end
+
+   def first_element_with_array_methods(array)
+     return array.first
+   end
+
+    def last_element_with_array_methods(array)
+      return array.last
+    end
+
+
+
+    def using_include(array,element)
+      if array.include?(element) == true
+        return true
+      else
+        return false
+     end
+    end
+
+    def using_sort(array)
+      return array.sort
+    end
+
+    def using_reverse(array)
+      return array.reverse
+    end
+
+    def using_first(array)
+      return array.first
+    end
+
+    def using_last(array)
+      return array.last
+    end
+
+    def using_size(array)
+      return array.size
+    end
+
+    def hotsauce
+      puts nadler = [1,2,3,4,5]
+    end
+
+
+
+    def square_array
+      array = [1,2,3,4,5]
+      new_array = []
+      array.each do |i|
+       new_array.push(i * i)
+     end
+       return new_array
+      # your code here
+    end
+    square_array
+
+
+
+
+    Prime numbers are numbers that are bigger than one and cannot be divided evenly by any other number except 1 and itself.
+
+    2,3,4,5,6
+
+    6 / 1 = 1
+    6 / 2 = 3
+    6 / 3 = 2
+
+    if X / number in array == 1 && X / number in array == X
+
+    7 / 1 = 1
+    7 / 2 = 3.5
+    7 / 3 = 2.3
+    7 / 4 =
+    7 / 5 =
+    7 / 6 =
+    7 / 7 =
+    Prime numbers
+
+    2, 3, 5, 7, 11, 13, 17, 19, 23, 29
+
+    can only be created by times by 1 and its self.
+
+
+    array of number to test if the X divided by the array numbers remainder is greater than 1
+
+
+        would need to build and array that creates a range from 2 to give number
+
+
+    def prime?(number)
+      primeCheck = []
+        for counter in 2..number do
+            if number % counter == 0
+          primeCheck.push(counter)
+        end
+      end
+      return checker(primeCheck)
+    end
+
+
+    def checker(primeCheck)
+      if primeCheck.size > 1
+        puts "FALSE"
+      else
+        return "TRUE"
+      end
+    end
+    prime?(11)
+
+    def squareRoot(number)
+        counter = 0
+        loop do
+        counter += 1
+        if (counter * counter).round == number
+            break
+        else
+          puts "THIS IS THE COUNTER VALUE #{counter}"
+          puts counter * counter
+        end
+      end
+      return counter
+    end
+    squareRoot(320)
+
+
+
+
+
+    # Add  code here!
+    def prime?(number)
+      #checs if the argument is postive integer
+      if number < 0
+        return "Please enter a positive integer"
+        end
+      #empty array to store results of if statement below
+      primeCheck = []
+      #for loop that starts at the lowest prime number and ends with the number pass as an argument.
+        for counter in 2..number do
+          #statement to check if the number divided by the counter is equal to 0
+            if number % counter == 0
+          primeCheck.push(counter)
+        end
+      end
+      puts primeCheck
+      return checker(primeCheck)
+    end
+
+
+    def checker(primeCheck)
+      #if size is biiger than 1, the number is not prime as it has more factors than two.
+      if primeCheck.size > 1
+        return "FALSE"
+      else
+        return "TRUE"
+      end
+    end
+    prime?(11)
+
+
+
+
+    # Write your code here.\
+
+def badge_maker(name)
+  return "Hello, my name is #{name}."
+end
+
+def batch_badge_creator(array)
+  array_badges = []
+    array.each do |i|
+      array_badges.push("Hello, my name is #{i}.")
+  end
+  array_badges
+end
+
+
+def assign_rooms(array)
+  roomListArray = []
+    roomNumber = 1
+      array.each do |i|
+        roomListArray.push("Hello, #{i}! You'll be assigned to room #{roomNumber}!")
+          roomNumber += 1
+      end
+    roomListArray
+end
+
+def printer(array)
+  bd = batch_badge_creator(array)
+    bd.each do |i|
+      puts i
+    end
+    pd = assign_rooms(array)
+      pd.each do |i|
+          puts i
+      end
+end
+
+
+# Write all of your code in deli_counter.rb
+#
+# Build the line method that shows everyone their current place in the line. If there is nobody in line, it should say "The line is currently empty.".
+#
+#
+
+
+  def line(katz_deli)
+    if katz_deli.size > 0
+      counter = 1
+          in_line = "The line is currently:"
+            katz_deli.each do |i|
+                   in_line += " #{counter}. #{i}"
+                counter += 1
+              end
+              puts in_line
+            else
+            puts "The line is currently empty."
+          end
+  end
+
+# Build a method that a new customer will use when entering the deli. The take_a_number method should accept two arguments, the array for the current line of people (katz_deli), and a string containing the name of the person joining the end of the line. The method should call out (puts) the person's name along with their position in line. Top-Tip: Remember that people like to count from 1, not from 0 ("zero") like computers.
+
+  def take_a_number(katz_deli, name)
+    if katz_deli.size == 0
+      katz_deli[0] = name
+        place_in_line = katz_deli.size
+          puts "Welcome, #{name}. You are number #{place_in_line} in line."
+        elsif katz_deli.size > 0
+          katz_deli.push(name)
+            place_in_line = katz_deli.size
+              puts "Welcome, #{name}. You are number #{place_in_line} in line."
+    end
+  end
+
+# Build the now_serving method which should call out (i.e. puts) the next person in line and then remove them from the front. If there is nobody in line, it should call out (puts) that "There is nobody waiting to be served!".
+
+  def now_serving(katz_deli)
+    if katz_deli.size == 0
+      puts "There is nobody waiting to be served!"
+        else
+          puts "Currently serving #{katz_deli[0]}."
+            katz_deli.shift
+    end
+  end
+
+
+
+
+
+  def roll_call_dwarves(array)
+  array.each_with_index do |dwarf, index|
+    puts "#{index + 1} #{dwarf}"
+  end
+end
+
+def summon_captain_planet(array)
+  output = array.collect do |capt|
+     capt.capitalize << "!"
+   end
+   output
+end
+
+def long_planeteer_calls(array)
+  array.any? do |word|
+    word.size > 4
+  end
+end
+
+def find_the_cheese(array)
+  # the array below is here to help
+  cheese_types = ["cheddar", "gouda", "camembert"]
+
+  for i in 0..array.size do
+      for t in 0..cheese_types.size do
+        if array[i] == cheese_types[t]
+          return array[i]
+      end
+    end
+  end
+end
+
+
+def summon_captain_planet(array)
+  array.split(//)
+  output = array.collect do |capt|
+     capt.capitalize << "!"
+   end
+   output
+end
+
+summon_captain_planet(["earth", "wind", "fire", "water", "heart"])
+
+
+summon_captain_planet(planeteer_calls)
+#=> ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
+
+
+
+#Ruby Yeild
+
+def hello_t(array)
+  i=0
+  while i < array.length
+    yield array[i]
+    i = i + 1
+  end
+end
+
+# call your method here!
+
+hello_t(["Tim", "Tom", "Jim"]) do |name|
+ if name.start_with?("T")
+    puts "Hi, #{name}"
+  end
+ end
+
+
+ What is a Closure?
+A closure is a block of functional code with variables that are bound to the environment that the closure is called in.
+
+A closure has a few important properties:
+
+it can be passed around like an object (but that does not necessarily mean it is an object, as we'll discuss below),
+a closure can be defined in one scope and be called in a completely different scope,
+it remembers the variables within its scope at the time of creation; when it's called, it can access those variables even if they might not be in that current scope—meaning that a closure retains knowledge of its lexical environment at the time that it was defined.
+
+
+
+
+def my_each(array)
+  i=0
+  while i < array.length
+    yield array[i]
+    i += 1
+  end
+  array
+end
+
+
+collection = [1,2,3,4]
+
+my_each(collection) { |i| i}
+
+
+
+def my_collect(array)
+  new_array = []
+  i=0
+  while i < array.length
+    new _array << yield(array[i])
+    i += 1
+  end
+end
+
+
+collection = ['ruby', 'javascript', 'python', 'objective-c']
+
+my_collect(collection) do |lang|
+lang.upcase
+end
+
+
+select { |obj| block } → array click to toggle source
+select → an_enumerator
+Returns an array containing all elements of enum for which the given block returns a true value.
+
+If no block is given, an Enumerator is returned instead.
+
+(1..10).find_all { |i|  i % 3 == 0 }   #=> [3, 6, 9]
+
+
+  def my_select(collection)
+ # your code here!
+    i=0
+    new_array = []
+      while i < collection.length
+        if yield(collection[i]) == true
+          new_array << collection[i]
+          i += 1
+        end
+    end
+    new_array
+end
+
+collection = [1,2,3,4]
+
+    my_select(collection) do |lang|
+      lang.odd?
+    end
+
+
+    def my_select(collection)
+    new_array = []
+    i=0;
+    while i < collection.length
+      if yield(collection[i]) == true
+        new_array.push(collection[i])
+      end
+        i += 1
+      end
+    new_array
+end
+
+
+def quiz_method(array, object)
+    array << object
+end
+
+array = ["hi", "there"]
+
+quiz_method(array, "quizmaster")
+
+
+
+The .sort method is different. It passes elements two at a time into the block, and compares those two elements inside the block with our if & elsif logic:
+
+If a and b are equal, the block will return 0, and .sort will leave them in their current places.
+If a is less than b and belongs before it, the block will return -1 and .sort will once again leave them in their current places (because a is already before b.)
+If a is greater than b and belongs after it, the block will return 1 and .sort will switch the locations of a and b.
+
+
+array = [7, 3, 1, 2, 6, 5]
+
+array.sort do |a, b|
+  if a == b
+    0
+  elsif a < b
+    -1
+  elsif a > b
+    1
+  end
+end
+
+
+Ruby Abstraction: The Spaceship Operator
+Now that we have an understanding of how .sort works, we can introduce a level of abstraction by using the "spaceship operator" (<=>). The spaceship operator, also called the combined comparison operator,
+
+returns 0 if the first operand equals the second,
+returns -1 if the first operand is less than the second, and
+returns 1 if the first operand is greater than the second.
+So, instead of utilizing if & elsif logic like we did above, we can simply call .sort with the following code:
+
+array = [7, 3, 1, 2, 6, 5]
+
+array.sort do |a, b|
+  a <=> b
+end
+
+#  => [1, 2, 3, 5, 6, 7]
+
+
+dishes = ["steak", "apple pie", "vegetable soup"]
+
+dishes.sort do |a, b|
+    b <=> a
+end
+
+person = {
+  "name" => "Corinna",
+  "age" => 36
+}
+
+# We can read Corinna's age with:
+person["age"] #=> 36
+
+# To add a key to the person hash:
+person["hometown"] = "Massena, NY"
+person["hometown"] #=> "Massena, NY"
+
+# Let's add another key
+person["favorite_thing"] = "Books"
+person["favorite_thing"] #=> "Books"
+
+
+
+
+def my_hash
+  first_hash = {"Ruby" => "Wicked sick"}
+end
+
+def shipping_manifest
+  the_manifest = {
+    "whale bone corsets" => 5,
+    "porcelain vases" => 2,
+    "oil paintings" => 3
+  }
+end
+
+def retrieval
+  shipping_manifest = {
+                  "whale bone corsets" => 5,
+                  "porcelain vases" => 2,
+                  "oil paintings" => 3
+                 }
+
+  # Look up the value of the "oil paintings" key in the shipping_manifest hash below
+    shipping_manifest["oil paintings"]
+end
+
+def adding
+shipping_manifest = {
+                "whale bone corsets" => 5,
+                "porcelain vases" => 2,
+                "oil paintings" => 3
+               }
+# add 2 muskets to the shipping_manifest hash below
+shipping_manifest["muskets"] = 2
+
+
+# add 4 gun powder to the shipping_manifest hash below
+shipping_manifest["gun powder"] = 4
+
+
+# return the shipping_manifest hash below
+shipping_manifest
+end
+
+
+
+A Note about Ruby Versions >= 1.9
+Youve probably seen Ruby hashes written with the hash-rocket (=>) notation:
+
+flatiron_school = {:instructor => "Isaac Newton"}
+In Ruby 1.9, we were introduced to the option of forgoing the hash-rocket (=>) when writing key/value pairs when the key is a symbol. Instead we can express it like this:
+
+flatiron_school = {instructor: "Isaac Newton"}
+A key expressed like instructor: is still interpreted as a symbol by the interpreter and this syntax is understood in the same way as a hash-rocket when the program is run.
+
+You can use either syntax; however, be consistent with whichever one you choose. We generally recommend the instructor: style.
+
+
+
+    #Method to create hases => object
+
+    def first_level(key, key_name, key_value)
+      key = {
+        key_name =>  key_value
+      }
+      key
+    end
+
+    first_level(:diss, "track_one", 69)
+
+    def second_level(key, key_name, key_value )
+      key = {
+        key_name = {
+          :key_value => '',
+          :key_value => ''
+        }
+      }
+    end
+
+    birthday_kids = {
+      "Timmy" => 9,
+      "Sarah" => 6,
+      "Amanda" => 27
+    }
+
+    def happy_birthday(birthday_kids)
+      # add your code snippet here!
+      birthday_kids.each do |kids_name, age|
+        puts "Happy Birthday #{kids_name}! You are now #{age} years old!"
+      end
+    end
+
+
+    birthday_kids = {
+        "Timmy" => 9,
+        "Sarah" => 6,
+        "Amanda" => 27
+    }
+
+    birthday_kids.collect do |kids_name, age|
+        age
+    end
+
+    # => [9, 6, 27]
+
+
+
+    def key_for_min_value(name_hash)
+
+  if name_hash.size < 1
+    return nil
+  end
+
+    holder = 99999
+    key_return = ''
+    name_hash.each do |key, value|
+      if value < holder
+        holder = value
+        key_return = key
+      end
+    end
+    key_return
+end
+
+
+
+def first_challenge
+  contacts = {
+    "Jon Snow" => {
+      name: "Jon",
+      email: "jon_snow@thewall.we",
+      favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"],
+      knows: nil
+    },
+    "Freddy Mercury" => {
+      name: "Freddy",
+      email: "freddy@mercury.com",
+      favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
+    }
+  }
+
+  #your code here
+    contacts.each do |key, value|
+      if key == "Freddy Mercury"
+        value.each do |data, contents|
+          if data == :favorite_icecream_flavors
+              contents.each do |cream|
+                if cream == 'strawberry'
+                  contents.delete('strawberry')
+                end
+              end
+            end
+        end
+      end
+    end
+  #remember to return your newly altered contacts hash!
+  contacts
+end
+
+
+first_challenge
+
+
+
+
+def first_challenge
+  contacts = {
+    "Jon Snow" => {
+      name: "Jon",
+      email: "jon_snow@thewall.we",
+      favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"],
+      knows: nil
+    },
+    "Freddy Mercury" => {
+      name: "Freddy",
+      email: "freddy@mercury.com",
+      favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
+    }
+  }
+
+  #your code here
+  contacts['Freddy Mercury'].keys.each do |key|
+      if key == :favorite_icecream_flavors
+         contacts['Freddy Mercury'][key].each do |i|
+          if i == 'strawberry'
+            contacts['Freddy Mercury'][key].delete('strawberry')
+          end
+        end
+      end
+  end
+  contacts
+end
+
+def second_challenge
+  groceries = {
+   dairy: ["milk", "yogurt", "cheese"],
+   vegetable: ["carrots", "broccoli", "cucumbers"],
+   meat: ["chicken", "steak", "salmon"],
+   grains: ["rice", "pasta"]
+  }
+
+  #code your solution here!
+
+  groceries.values.join(' ').split(' ')
+
+end
+
+Higher Level Hash Methods
+In a previous lab, you were asked to iterate over a hash and collect the key that pointed to the lowest value. We asked you not to use some of the higher level hash methods there. Now, were going to learn a few tricks that can make a task like that much easier.
+
+.values
+You can collect all of the values in a hash with the .values method:
+
+family_members = {mom: "Victoria", dad: "Richard", sister: "Zoe"}
+
+family_members.values
+#  => ["Victoria", "Richard", "Zoe"]
+We can see that the .values method returns an array of the values of the keys in the hash.
+
+.keys
+This method, not surprisingly, returns an array containing all of the keys in the hash that .keys has been called on:
+
+family_members = {mom: "Victoria", dad: "Richard", sister: "Zoe"}
+
+family_members.keys
+#  => [:mom, :dad, :sister]
+.min
+You can use the .min method on a hash to return the key/value pair that contains that lowest key, either alphabetically or numerically:
+
+food_items = {apples: 45, pears: 12}
+
+food_items.min
+#  => [:apples, 45]
+
+
+def add_supply_to_memorial_day
+  # again, holiday_hash is the same as the ones above
+  # add the second argument to the memorial day array
+  holiday_hash = {
+    :winter => {
+      :christmas => ["Lights", "Wreath"],
+      :new_years => ["Party Hats"]
+    },
+    :summer => {
+      :fourth_of_july => ["Fireworks", "BBQ"]
+    },
+    :fall => {
+      :thanksgiving => ["Turkey"]
+    },
+    :spring => {
+      :memorial_day => ["BBQ"]
+    }
+  }
+
+  holiday_hash.each do |key, value|
+    puts key.to_s.capitalize! + ':'
+
+    value.each do |data, content|
+
+      h = data.to_s.split('_')
+      array = h.collect do |i|
+       i.capitalize
+     end
+
+     puts '  ' + array.join(' ') + ': ' + content.join(', ')
+  end
+end
+
+end
+
+add_supply_to_memorial_day
+
+
+
+
+def add_supply_to_memorial_day
+  # again, holiday_hash is the same as the ones above
+  # add the second argument to the memorial day array
+  holiday_hash = {
+    :winter => {
+      :christmas => ["Lights", "Wreath"],
+      :new_years => ["Party Hats"]
+    },
+    :summer => {
+      :fourth_of_july => ["Fireworks", "BBQ"]
+    },
+    :fall => {
+      :thanksgiving => ["Turkey"]
+    },
+    :spring => {
+      :memorial_day => ["BBQ"]
+    }
+  }
+
+  return_array = []
+
+  holiday_hash.each do |key, value|
+    puts "This is the key #{key}"
+    puts "This is the value #{value}"
+    value.each do |tag, content|
+      puts "This is the tag #{tag}"
+      puts "This is the content #{content}"
+      content.each do |i|
+        if i == "BBQ"
+            return_array.push(tag)
+        end
+      end
+    end
+  end
+  return_array
+end
+
+add_supply_to_memorial_day
+
+languages = {
+  :oo => {
+    :ruby => {
+      :type => "interpreted"
+    },
+    :javascript => {
+      :type => "interpreted"
+    },
+    :python => {
+      :type => "interpreted"
+    },
+    :java => {
+      :type => "compiled"
+    }
+  },
+  :functional => {
+    :clojure => {
+      :type => "compiled"
+    },
+    :erlang => {
+      :type => "compiled"
+    },
+    :scala => {
+      :type => "compiled"
+    },
+    :javascript => {
+      :type => "interpreted"
+    }
+
+  }
+}
+
+def reformat_languages(languages)
+    new_hash = {}
+    languages.each do |key, value|
+      value.each do |i,k|
+        new_hash[i] = k
+        new_hash[i][:style] = [key]
+      end
+    end
+
+   new_hash[:javascript][:style] << :oo
+   new_hash
+  end
+
+
+  def get_first_name_of_season_winner(json_object, season)
+  json_object[:"#{season}"][0][:name].split(' ')[0].to_s
+end
+get_first_name_of_season_winner(data, "season 10")
+
+
+
+  def get_first_name_of_season_winner(json_object, season)
+    json_object[:"#{season}"].each do |i|
+      i.values.each do |t|
+      if t == 'Winner'
+        return i[:name].split(' ')[0].to_s
+      end
+     end
+    end
+  end
+  get_first_name_of_season_winner(data, "season 10")
+
+
+
+  def count_elements(array)
+      new_array = []
+
+      array.each do |i|
+      puts array.count(i)
+        new_array.push({:name => i[:name],  :count => array.count(i)})
+      end
+
+      new_array.uniq
+  end
+count_elements([{:name => "blake"}, {:name => "blake"}, {:name => "ashley"}])
+
+  def dictionary
+    {
+      "hello" => 'hi',
+      "to" => '2',
+      "two" => '2',
+      "too" => '2',
+      "for" => '4',
+      "four" => '4',
+      "be" => 'b',
+      "you" => 'u',
+      "at" => '@',
+      "and" => '&'
+    }
+  end
+
+
+  def word_substituter(string)
+    string_array = string.split(' ')
+     i = 0
+     while i < string_array.size
+      dictionary.each { |key, value|
+        if string_array[i] == key
+          string_array[i] = value
+        end
+      }
+      i += 1
+    end
+    string_array
+  end
+
+
+  def dictionary
+    {
+      "hello" => 'hi',
+      "to" => '2',
+      "two" => '2',
+      "too" => '2',
+      "for" => '4',
+      "four" => '4',
+      "be" => 'b',
+      "you" => 'u',
+      "at" => '@',
+      "and" => '&'
+    }
+  end
+
+   def bulk_tweet_shortner(tweets)
+     string_array = tweets.collect do |i|
+       i.split(' ')
+     end
+     string_array = string_array.flatten
+     i = 0
+     while i < string_array.size
+      dictionary.each { |key, value|
+        if string_array[i] == key
+          string_array[i] = value
+        end
+      }
+      i += 1
+    end
+
+     puts "#{string_array}"
+  end
+
+  bulk_tweet_shortner(["Hey guys, can anyone teach me how to be cool? I really want to be the best at everything, you know what I mean? Tweeting is super fun you guys!!!!", "OMG you guys, you won't believe how sweet my kitten is. My kitten is like super cuddly and too cute to be believed right?"])
+ruby_methods.rb
+Displaying ruby_methods.rb.
+
+
+
+def begins_with_r(array)
+  i=0
+  checker = 0
+  while i < array.length
+    if array[i].to_s[0].downcase == 'r'
+      checker += 1
+    end
+      i += 1
+  end
+
+  if checker == i
+    return true
+  else
+    return false
+  end
+end
+
+
+def contain_a(array)
+return_array = []
+  array.each do |i|
+    if i.to_s.include? "a"
+      return_array.push(i)
+    end
+  end
+return_array
+end
+
+
+#first_wa
+  Return the first element that begins with the letters 'wa' (FAILED - 4)
+
+  def first_wa(array)
+    array.each do |i|
+      if i.to_s[0..1] == 'wa'
+        puts i
+      end
+    end
+  end
+
+
+
+
+  #remove_non_strings
+    remove anything that=s not a string from an array (FAILED - 5)
+
+def remove_non_strings(array)
+  array.delete_if {|i| !i == i.to_s }
+end
+
+
+
+#count_elements
+  count how many times something appears in an array (FAILED - 6)
+
+
+
+  def count_elements(array)
+      array.each do |i|
+        array.count(i)
+      end
+  end
+
+
+
+  def count_elements(array)
+  array_compare = array.uniq
+
+  array_compare[0] += :count
+    array_compare
+end
+count_elements([{:name => "blake"}, {:name => "blake"}, {:name => "ashley"}])
+
+# [{:name => "blake", :count => 2}, {:name => "ashley", :count => 1}]
+
+def count_elements(array)
+    new_array = []
+
+    array.each do |i|
+    puts array.count(i)
+      new_array.push({:name => i[:name],  :count => array.count(i)})
+    end
+
+    new_array.uniq
+end
+count_elements([{:name => "blake"}, {:name => "blake"}, {:name => "ashley"}])
+
+
+def run_guessing_game
+puts 'Guess a number between 1 and 6.'
+randomRoll = rand(6)
+input = gets.chomp
+
+if input == 'exit'
+puts 'Goodbye!'
+return
+elsif input.to_i == randomRoll
+puts 'You guessed the correct number!'
+return run_guessing_game
+elsif input.to_i != randomRoll
+puts "The computer guessed #{randomRoll}."
+return run_guessing_game
+end
+end
+
+
+require 'yaml'
+
+  # has two keys, 'get_meaning' and 'get_emoticon'
+  #   the keys 'get_meaning' and 'get_emoticon' point to inner hashes
+  #   the keys inside the 'get_meaning' hash are the Japanese emoticons
+  #   the emoticon keys inside the 'get_meaning' hash point to their meanings
+  #   the keys inside the 'get_emoticon' hash are the English emoticons
+  #   the emoticon keys inside the 'get_emoticon' hash point to their Japanese equivalents
+
+def load_library(emote)
+  emotes = YAML.load_file(emote)
+  new_hash = {"get_meaning" => {} , "get_emoticon" => {}}
+
+  emotes.each do |i,k|
+    new_hash["get_meaning"][k[1]] = i
+    new_hash["get_emoticon"][k[0]] = k[1]
+  end
+  new_hash
+end
+
+
+# #get_japanese_emoticon
+#   accepts two arguments, the YAML file path and the emoticon (FAILED - 1)
+#   calls on #load_library and gives it the argument of the file path (FAILED - 2)
+#   returns the Japanese equivalent of an English grinning (FAILED - 3)
+#   returns the Japanese equivalent of an English happy (FAILED - 4)
+#   returns the Japanese equivalent of an English sad (FAILED - 5)
+#   returns an apology message if the argument is not a known emoticon (FAILED - 6)
+
+
+def get_japanese_emoticon(file_path, emoticon)
+  load_library(file_path)["get_emoticon"].each do |key,values|
+      if key == emoticon
+        return values
+      end
+    end
+    return "Sorry, that emoticon was not found"
+end
+# get_japanese_emoticon('emoticons.yml', "=D")
+
+# #get_english_meaning
+#   accepts two arguments, the YAML file path and the emoticon (FAILED - 1)
+#   calls on #load_library and gives it the argument of the file path (FAILED - 2)
+#   returns the English meaning of the Japanese emoticon (＾ｖ＾) (FAILED - 3)
+#   returns the English meaning of the Japanese emoticon (￣ー￣) (FAILED - 4)
+#   returns the English meaning of the Japanese emoticon (Ｔ▽Ｔ) (FAILED - 5)
+#   returns an apology message if the argument is not a known emoticon (FAILED - 6)
+
+def get_english_meaning(file_path, emoticon)
+  load_library(file_path)["get_meaning"].each do |keys, value|
+    if emoticon == keys
+      return value
+    end
+  end
+  return "Sorry, that emoticon was not found"
+end
+get_english_meaning('emoticons.yml', "(＾ｖ＾)")
+
+
+
+
+asp = ["ĝis revido", "ĝuste"]
+
+def alphabetize(arr)
+ esp = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
+ esp = esp.split('')
+
+  arr.sort_by do |word|
+    word.split('').collect do |i|
+    esp.index(i)
+    end
+   end
+end
+alphabetize(asp)
+
+
+
+def LetterChanges(str)
+  alphabet = ('a'..'z').to_a
+  str_arr = str.split('')
+
+     result = str_arr.map do |letter|
+         if alphabet.include?(letter)
+             new_letter = alphabet[alphabet.index(letter) + 1]
+            else
+             letter
+        end
+     end
+
+
+
+  result = result.collect do |letter|
+    if letter == 'a' || letter == "e" || letter == "i" || letter == "o" || letter == "u"
+     letter.upcase
+     else
+     letter
+    end
+  end
+
+    return result.join()
+
+end
+
+
+
+def LetterCapitalize(str)
+  str_arr = str.split('')
+  str_arr[0] = str_arr[0].upcase
+
+      for counter in 0..str_arr.length do
+        if str_arr[counter] == " "
+          str_arr[counter + 1] = str_arr[counter + 1].upcase
+        end
+      end
+
+
+  return  str_arr.join('')
+end
